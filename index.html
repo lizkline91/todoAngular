@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>todos</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<html ng-app>
+  <head>
+    <h1>todos</h1>
+    <div class="todo-wrapper" ng-controller="TodoCtrl">
+
+      <form>
+        <div class="addBar">
+          <button class="add-btn" ng-click="addTodo()"><img src="http://cdn.flaticon.com/png/256/10166.png" width="40px"></button>
+        <input class="add-input" placeholder="What needs to be done?" type="text" ng-model="formTodoText" ng-model-instant required="required" />
+        </div>
+      </form>
+
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+          <button class="delete" type="button" aria-hidden="true" ng-click="deleteTodo($index)"><i class="fa fa-times"></i></button>
+        </li>
+      </ul>
+
+      <div class="bottomNav">
+        <div class="numberleft">{{getTotalTodos()}} item(s) left</div>
+        <div class="middle">
+            <div class='all'>All</div>
+            <div class='active'>Active</div>
+            <div class='completed'>Complete</div>
+        </div>
+        <div class="right"><button class="clear-btn" ng-click="clearCompleted()">Clear completed</button></div>
+      </div>
+    </div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

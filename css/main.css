@@ -1,0 +1,92 @@
+body {
+  background: grey;
+}
+
+.todo-wrapper {
+  background: white;
+  border-top:15px solid #8C7E79;
+  margin-left:10%;
+  width: 80%;
+}
+
+h1{
+  font-size:4em;
+  text-align:center;
+  color:lightgrey;
+}
+h2 {
+  font-size: 2em;
+  padding: 40px;
+  margin: 0;
+  text-align: center;
+ }
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  font-size: 2em;
+  padding: 40px;
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+li input[type="checkbox"] {
+  width: 40px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}
+.addBar{
+  width:100%;
+  background:lightgrey;
+}
+.add-input {
+  width: 60%;
+  float: center;
+  background:none;
+  border: none;
+  padding-left:0px;
+  z-index:50;
+  margin-left:-15px;
+  font-size: 1.5em;
+  text-indent: 55px;
+}
+.add-btn {
+  border: none;
+  padding-top:4px;
+  background:none;
+
+}
+.bottomNav{
+  padding:5px;
+}
+.bottomNav div{
+display:inline-block;
+}
+.right{
+  float:right;
+}
+.middle{
+  width:140px;
+  margin-left:30%;
+}
+.fa-times{
+  color: #8C7E79;
+  float:right;
+  width:110%;
+}
+.delete{
+  border:none;
+  background:none;
+  float:right;
+  font-size:1em;
+}
+.delete:hover{
+  font-size:1.2em;
+}

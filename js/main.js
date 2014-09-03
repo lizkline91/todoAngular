@@ -4,7 +4,8 @@ function TodoCtrl($scope) {
     {text:'wash dishes', done:false, editing : false},
     {text: 'walk dog', done:false, editing : false}
   ];
-
+  $scope.slash = false;
+  
   $scope.getTotalTodos = function () {
     return $scope.todos.length;
   };
@@ -22,7 +23,7 @@ function TodoCtrl($scope) {
   $scope.deleteTodo = function  (index) {
     $scope.todos.splice(index, 1);
 };
-      
+
   $scope.editTodo = function(todo){
       todo.editing=true;
   }

@@ -1,5 +1,6 @@
 body {
-  background: grey;
+  background: #ECECEC;
+  font-family:"Helvetica";
 }
 
 .todo-wrapper {
@@ -13,6 +14,7 @@ h1{
   font-size:4em;
   text-align:center;
   color:lightgrey;
+  text-shadow: 1px 1px grey;
 }
 h2 {
   font-size: 2em;
@@ -32,12 +34,17 @@ li {
   list-style-type: none;
   margin-left: 0px;
   padding-left: 0px;
+  border-bottom:1px dotted lightgrey;
 }
 
 li input[type="checkbox"] {
-  width: 40px;
+  width: 50px;
+  margin-left:5px;
 }
-
+.verticalLine {
+    border-left:1px solid red;
+    display:inline-block;
+}
 .done-true {
   text-decoration: line-through;
   color: #ddd;
@@ -65,6 +72,7 @@ li input[type="checkbox"] {
 }
 .bottomNav{
   padding:5px;
+  background-color:lightgrey;
 }
 .bottomNav div{
 display:inline-block;
@@ -73,8 +81,13 @@ display:inline-block;
   float:right;
 }
 .middle{
-  width:140px;
-  margin-left:30%;
+  width:160px;
+  margin-left:28%;
+  text-align:center;
+}
+.middle div{
+  padding-left:4px;
+  text-align:center;
 }
 .fa-times{
   color: #8C7E79;
@@ -89,4 +102,9 @@ display:inline-block;
 }
 .delete:hover{
   font-size:1.2em;
+}
+.note{
+  color:grey;
+  font-size:.9em;
+  text-align:center;
 }

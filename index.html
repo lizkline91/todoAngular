@@ -16,17 +16,19 @@
       <form>
         <div class="addBar">
           <button class="add-btn" ng-click="addTodo()"><img src="http://cdn.flaticon.com/png/256/10166.png" width="40px"></button>
-        <input class="add-input" placeholder="What needs to be done?" type="text" ng-model="formTodoText" ng-model-instant required="required" />
+        <input class="add-input" placeholder="What needs to be done?" type="text" ng-model="formTodoText" ng-model-instant />
         </div>
       </form>
-
-      <ul>
-        <li ng-repeat="todo in todos">
-          <input type="checkbox" ng-model="todo.done"/>
-          <span class="done-{{todo.done}}">{{todo.text}}</span>
-          <button class="delete" type="button" aria-hidden="true" ng-click="deleteTodo($index)"><i class="fa fa-times"></i></button>
-        </li>
-      </ul>
+      <div class="listbox">
+        <ul>
+          <li ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done"/>
+            <div class="verticalLine"></div>
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+            <button class="delete" type="button" aria-hidden="true" ng-click="deleteTodo($index)"><i class="fa fa-times"></i></button>
+          </li>
+        </ul>
+      </div>
 
       <div class="bottomNav">
         <div class="numberleft">{{getTotalTodos()}} item(s) left</div>
@@ -35,9 +37,10 @@
             <div class='active'>Active</div>
             <div class='completed'>Complete</div>
         </div>
-        <div class="right"><button class="clear-btn" ng-click="clearCompleted()">Clear completed</button></div>
+        <div class="right"><button class="clear-btn" ng-click="clearCompleted()">Clear completed ({{getTotalTodos()}})</button></div>
       </div>
     </div>
+    <p class="note">Double-click to edit a todo.</p>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

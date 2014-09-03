@@ -102,6 +102,7 @@ display:inline-block;
 }
 .delete:hover{
   font-size:1.2em;
+  text-shadow: 0 0 3px #FF0000;
 }
 .note{
   color:grey;
